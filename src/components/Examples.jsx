@@ -1,4 +1,5 @@
 import TabButton from './TabButton';
+import Section from './Section.jsx';
 import {EXAMPLES} from '../data.js'
 import { useEffect, useState } from 'react';
 
@@ -14,8 +15,7 @@ const Examples = () =>{
   },[selectedTopic]);  
 
     return (
-        <section id="examples">
-          <h2>Examples</h2>
+        <Section title="Examples" id="examples">
         <menu>
             <TabButton isSelected={selectedTopic==='components'} onSelect={handleSelect.bind(null,'components')}>Components</TabButton>
             <TabButton isSelected={selectedTopic==='jsx'} onSelect={handleSelect.bind(null,'jsx')}>JSX</TabButton>
@@ -30,7 +30,7 @@ const Examples = () =>{
                 <code>{EXAMPLES[selectedTopic]?.code}</code>
               </pre>
             </div>}
-        </section>
+        </Section>
     )
 }
 

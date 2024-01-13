@@ -1,5 +1,6 @@
 import CoreConcept from './CoreConcept';
 import  {CORE_CONCEPTS}  from '../data.js';
+import Section from './Section.jsx';
 
 const CoreConcepts = () => {
 
@@ -8,12 +9,11 @@ const CoreConcepts = () => {
     })
 
     return (
-        <section id="core-concepts">
-            <h2>Core Concept</h2>
+        <Section title="Core Concepts" id="core-concepts">
             <ul>
                 {coreConcepts}
             </ul>
-        </section>
+        </Section>
     )
 }
 
